@@ -6,7 +6,7 @@ export default function NavBar() {
   const currentColor = `rgb(${r},${g},${b})`;
 
   return (
-    <div className='navbar' style={{'--currentColor': currentColor }}>
+    <div className='navbar' style={{ '--currentColor': currentColor }}>
       <NavLink to="/rgb/242/194/203" className="navlink">
         Orchid Pink
       </NavLink>
