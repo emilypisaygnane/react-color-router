@@ -1,0 +1,8 @@
+.colors {
+    align-items: center;
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    width: 100%;
+    color: white;
+}
