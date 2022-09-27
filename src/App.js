@@ -1,23 +1,30 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
 import RGB from './Components/RGB/RGB';
 import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Switch>
-        <Route path="/rgb/:r/:g/:b">
-          <RGB />
-        </Route>
+    <BrowserRouter>
+      <main className="App">
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/rgb/242/194/203" />
+          </Route>
 
-        <Route path="*">
-          <NotFound />
-        </Route>
-      </Switch>
-    </div>
+          <Route path="/rgb/:r/:g/:b">
+            <NavBar />
+            <RGB />
+          </Route>
+
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </main>
+    </BrowserRouter>
+   
   );
 }
 

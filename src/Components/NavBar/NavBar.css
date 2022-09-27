@@ -21,6 +21,6 @@
   
   .active {
     text-decoration: underline;
-    color: var(--currentColor);
+    color: purple;
     font-size: 1.4em;
   }
