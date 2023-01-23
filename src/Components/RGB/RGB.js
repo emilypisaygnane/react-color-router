@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import './RGB.css';
-import 'animate.css';
+// import 'animate.css';
 
 export default function RGB() {
   const { r, g, b } = useParams();

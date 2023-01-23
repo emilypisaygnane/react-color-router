@@ -1,4 +1,4 @@
-import 'animate.css';
+// import 'animate.css';
 import './NotFound.css';
 
 export default function NotFound() {
