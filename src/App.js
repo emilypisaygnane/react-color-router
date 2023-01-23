@@ -1,34 +1,36 @@
 import './App.css';
+import Layout from './Layout.jsx';
 import { 
-  Redirect, 
-  Route, 
-  Switch 
+  Routes,
+  Navigate,
+  BrowserRouter as Router,
+  useParams,
+  Route
 } from 'react-router-dom';
-// import NavBar from './Components/NavBar/NavBar';
-// import RGB from './Components/RGB/RGB';
-// import NotFound from './Components/NotFound/NotFound';
+import NotFound from './Components/NotFound/NotFound.jsx';
+
+function RGB() {
+  const { r, g, b } = useParams();
+
+  return (
+    <div className="fill" style={{ background: `rgb(${r}, ${g}, ${b})` }}>
+      <p>{`rgb(${r}, ${g}, ${b})`}</p>
+    </div>
+  );
+}
 
 function App() {
-  return (
-    <main className="App">
-      <Switch>
-        <Route exact path="/">
-          <Redirect to="/rgb/242/194/203" />
-        </Route>
+  return <>
 
-        <Route path="/rgb/:r/:g/:b">
-          <NavBar />
-          <RGB />
-        </Route>
-
-        <Route path="*">
-          <NotFound />
-        </Route>
-      </Switch>
-    </main>
-
-   
-  );
+      <Router>
+        <Layout />
+        <Routes>
+          <Route path="/" element={<Navigate to="/rgb/255/255/255" />} />
+          <Route path="/rgb/:r/:g/:b" element={<RGB />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+      </>;
 }
 
 export default App;

@@ -13,10 +13,10 @@ export default function Layout() {
         Orchid Pink
         </NavLink>
         <NavLink className="Shimmering Blush" to="/rgb/217/132/155">
-      Shimmering Blush
+        Shimmering Blush
         </NavLink>
         <NavLink className="Opera Mauve" to="/rgb/191/122/160">
-      Opera Mauve
+        Opera Mauve
         </NavLink>
       </ul>
     </header>
