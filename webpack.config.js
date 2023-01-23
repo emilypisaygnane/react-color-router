@@ -1,6 +1,7 @@
-const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = { 
   mode: process.env.NODE_ENV === 'productions' ? 'production' : 'development',
@@ -19,7 +20,7 @@ module.exports = {
   module: { 
     rules: [
       {
-        test: /\.?js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -44,6 +45,11 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       React: 'react',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public', to: '.' },
+      ],
     }),
   ],
 };

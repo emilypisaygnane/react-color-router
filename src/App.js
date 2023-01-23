@@ -7,16 +7,18 @@ import {
   useParams,
   Route
 } from 'react-router-dom';
+import RGB from './Components/RGB/RGB.js';
 
-function RGB() {
-  const { r, g, b } = useParams();
 
-  return (
-    <div className="fill" style={{ background: `rgb(${r}, ${g}, ${b})` }}>
-      <p>{`rgb(${r}, ${g}, ${b})`}</p>
-    </div>
-  );
-}
+// function RGB() {
+//   const { r, g, b } = useParams();
+
+//   return (
+//     <div className="fill" style={{ background: `rgb(${r}, ${g}, ${b})` }}>
+//       <p>{`rgb(${r}, ${g}, ${b})`}</p>
+//     </div>
+//   );
+// }
 
 function App() {
   return <>
