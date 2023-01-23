@@ -1,4 +1,4 @@
-import { NavLink, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './NavBar.css';
 
 export default function NavBar() {
@@ -7,7 +7,7 @@ export default function NavBar() {
 
   return (
     <div className='navbar' style={{ '--currentColor': currentColor }}>
-      <NavLink to="/rgb/242/194/203" className="navlink">
+      {/* <NavLink to="/rgb/242/194/203" className="navlink">
         Orchid Pink
       </NavLink>
 
@@ -17,7 +17,7 @@ export default function NavBar() {
 
       <NavLink to="/rgb/191/122/160" className="navlink">
         Opera Mauve
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 }
