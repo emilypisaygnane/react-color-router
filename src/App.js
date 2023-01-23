@@ -1,8 +1,12 @@
 import './App.css';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import NavBar from './Components/NavBar/NavBar';
-import RGB from './Components/RGB/RGB';
-import NotFound from './Components/NotFound/NotFound';
+import { 
+  Redirect, 
+  Route, 
+  Switch 
+} from 'react-router-dom';
+// import NavBar from './Components/NavBar/NavBar';
+// import RGB from './Components/RGB/RGB';
+// import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
