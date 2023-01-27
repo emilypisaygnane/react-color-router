@@ -4,7 +4,6 @@ import {
   Routes,
   Navigate,
   BrowserRouter as Router,
-  useParams,
   Route
 } from 'react-router-dom';
 import RGB from './Components/RGB/RGB.js';
