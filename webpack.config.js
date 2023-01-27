@@ -36,12 +36,14 @@ module.exports = {
           'style-loader',
           { loader: 'css-loader' },
         ],
+      },
+      {
+        eslint: {
+          failOnError: false,
+          failOnWarning: false,
+        },
       }
-    ],
-    eslint: {
-      failOnError: false,
-      failOnWarning: false,
-    }
+    ]
   },
   plugins: [ 
     new HtmlWebpackPlugin({
