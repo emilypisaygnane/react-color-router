@@ -37,12 +37,6 @@ module.exports = {
           { loader: 'css-loader' },
         ],
       },
-      {
-        eslint: {
-          failOnError: false,
-          failOnWarning: false,
-        },
-      }
     ]
   },
   plugins: [ 
